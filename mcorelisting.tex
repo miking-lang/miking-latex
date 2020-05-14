@@ -9,7 +9,7 @@
 \definecolor{cstrings}{rgb}{0,0.5,0}
 \definecolor{cwarnings}{rgb}{1,0.5,0}
 
-\lstdefinelanguage{Mcore}{
+\lstdefinelanguage{MCore}{
     morekeywords={Lam,con,else,end,fix,if,in,lam,lang,let,match,recursive,sem,syn,then,type,use,utest,with},
     keywordstyle=\color{ckeywords},
     morekeywords=[2]{mexpr,include,never},
@@ -37,7 +37,7 @@
 \lstnewenvironment{mcore}
   {
     \lstset{
-      language=Mcore,
+      language=MCore,
       numbers=none,
       xleftmargin=0pt
     }
@@ -46,9 +46,9 @@
 \lstnewenvironment{mcore-lines}
   {
     \lstset{
-      language=Mcore,
+      language=MCore,
       xleftmargin=0pt
     }
   }{}
 
-\newcommand{\mcoreinline}[1]{\lstinline[{language=Mcore}]|#1|}
+\newcommand{\mcoreinline}[1]{\lstinline[{language=MCore}]|#1|}
