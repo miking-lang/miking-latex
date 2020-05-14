@@ -1,0 +1,54 @@
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{courier}
+
+\newcommand\mcorefont{\fontfamily{pcr}\selectfont}
+
+\definecolor{ckeywords}{rgb}{0.13,0.13,1}
+\definecolor{ccomments}{rgb}{0,0.5,0.5}
+\definecolor{cstrings}{rgb}{0,0.5,0}
+\definecolor{cwarnings}{rgb}{1,0.5,0}
+
+\lstdefinelanguage{Mcore}{
+    morekeywords={Lam,con,else,end,fix,if,in,lam,lang,let,match,recursive,sem,syn,then,type,use,utest,with},
+    keywordstyle=\color{ckeywords},
+    morekeywords=[2]{mexpr,include,never},
+    keywordstyle=[2]\color{cwarnings},
+    morecomment=[l][\color{ccomments}]{--},
+    morestring=[b]",
+    stringstyle=\color{cstrings},
+    sensitive=true,
+    basicstyle=\mcorefont,
+    breaklines=true,
+    escapeinside={(*@}{@*)},
+    numbers=left,
+    stepnumber=1,
+    numberstyle=\tiny,
+    xleftmargin=0pt, % numbers will be in the margins
+    columns=fixed, % same width for all characters
+    % columns=flexible,
+    % columns=fullflexible,
+    showstringspaces=false,
+    mathescape=true,
+    breaklines=true,
+    breakatwhitespace=true,
+  }
+
+\lstnewenvironment{mcore}
+  {
+    \lstset{
+      language=Mcore,
+      numbers=none,
+      xleftmargin=0pt
+    }
+  }{}
+
+\lstnewenvironment{mcore-lines}
+  {
+    \lstset{
+      language=Mcore,
+      xleftmargin=0pt
+    }
+  }{}
+
+\newcommand{\mcoreinline}[1]{\lstinline[{language=Mcore}]|#1|}

@@ -1,0 +1,43 @@
+\documentclass{article}
+
+\input{mcorelisting}
+
+\begin{document}
+Line~\ref{l:magic} is where the magic happens. This is inline code
+\mcoreinline{let f = lam x. x}.
+
+\begin{figure}[h]
+  \begin{mcore-lines}
+  include "seq.mc"
+
+  let foo =
+    -- This is a comment
+    let s = "magic" in (*@\label{l:magic}@*)
+    let one = 1 in
+    lam x. x
+
+  mexpr
+    utest 1 with 1 in ()
+  \end{mcore-lines}
+  \caption{With line numbers.}
+\end{figure}
+
+\begin{figure}[h]
+  \begin{mcore}
+  include "seq.mc"
+
+  let foo =
+    -- This is a comment
+    let s = "magic" in
+    let one = 1 in
+    lam x. x
+
+  mexpr
+    utest 1 with 1 in ()
+  \end{mcore}
+  \caption{Without line numbers.}
+\end{figure}
+
+\lstinputlisting[language=Mcore,caption={Included from file.}]{example.mc}
+
+\end{document}
