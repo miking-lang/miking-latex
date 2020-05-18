@@ -3,7 +3,7 @@
 Defines Latex environments and macros for including syntax-highlighted Miking
 code in your Latex documents.
 
-To use, include the `mcorelisting.tex` file in your Latex file:
+To use, include the `mcorelisting.tex` file in the preamble of your Latex file:
 ```
 \input{mcorelisting}
 ```
