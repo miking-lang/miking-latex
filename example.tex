@@ -1,10 +1,18 @@
 \documentclass{article}
 
+\usepackage{verbatim}
 \input{mcorelisting}
 
 \begin{document}
 Line~\ref{l:magic} is where the magic happens. This is inline code
 \mcoreinline{let f = lam x. x}.
+
+\def \mcorefontsize {\tiny}
+%
+Setting \verb|\mcorefontsize| to \verb|\tiny| gives tiny code: \mcoreinline{let
+  f = lam x. x}.
+%
+\def \mcorefontsize {\normalsize}
 
 \begin{figure}[h]
   \begin{mcore-lines}
