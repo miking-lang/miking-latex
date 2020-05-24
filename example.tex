@@ -24,6 +24,10 @@ Setting \verb|\mcorefontsize| to \verb|\tiny| gives tiny code: \mcoreinline{let
     let one = 1 in
     lam x. x
 
+  let bar: Int -> (Int -> Int) =
+    lam i.
+    addi i
+
   mexpr
     utest 1 with 1 in ()
   \end{mcore-lines}
@@ -39,6 +43,10 @@ Setting \verb|\mcorefontsize| to \verb|\tiny| gives tiny code: \mcoreinline{let
     let s = "magic" in
     let one = 1 in
     lam x. x
+
+  let bar: Int -> (Int -> Int) =
+    lam i.
+    addi i
 
   mexpr
     utest 1 with 1 in ()
